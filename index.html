@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestell App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Bestell App</h1>
+  </header>
+
+  <main class="layout">
+    <section id="menu" class="menu">
+      <h2>Speisekarte</h2>
+      <div id="menu-list" class="menu-list"></div>
+    </section>
+
+    <aside id="basket" class="basket">
+      <h2 class="basket__header">Warenkorb</h2>
+      <ul id="basket-list" class="basket__list"></ul>
+      <p id="basket-total" class="basket__total">0.00 €</p>
+    </aside>
+  </main>
+
+  <script src="scripts/db.js"></script>
+  <script src="scripts/template.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
