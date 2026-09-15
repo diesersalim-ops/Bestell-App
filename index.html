@@ -38,14 +38,23 @@
        <div id="menu-list" class="menu-list"></div>
      </section>
 
-    <aside id="basket" class="basket">
-  <div class="basket__header-row">
-    <h2 class="basket__header">Your Basket</h2>
-    <button id="basket-close" class="basket__close" type="button" data-action="close-basket" aria-label="Warenkorb schließen">✕</button>
-  </div>
-  <ul id="basket-list" class="basket__list"></ul>
-       <p id="basket-total" class="basket__total">0.00 €</p>
-     </aside>
+   <ul id="basket-list" class="basket__list"></ul>
+      <div id="basket-summary" class="basket__summary" hidden>
+        <p class="basket__row">
+          <span>Subtotal</span>
+          <span id="basket-subtotal">0,00 €</span>
+        </p>
+        <p class="basket__row">
+          <span>Delivery fee</span>
+          <span>4,99 €</span>
+        </p>
+        <p class="basket__row basket__row--total">
+          <span>Total</span>
+          <span id="basket-total">0,00 €</span>
+        </p>
+        <button id="basket-buy" class="button basket__buy" type="button">Buy now</button>
+      </div>
+    </aside>
    </main>
 
 -  <script src="scripts/db.js"></script>
