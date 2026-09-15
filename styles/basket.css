@@ -18,3 +18,35 @@
   cursor: pointer;
   line-height: 1;
 }
+
+.basket-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 19;
+}
+
+@media (max-width: 768px) {
+  .basket {
+    position: fixed;
+    inset: auto 0 0 0;
+    max-height: 80vh;
+    border-radius: 16px 16px 0 0;
+    transform: translateY(100%);
+    transition: transform 0.25s ease;
+    z-index: 20;
+    overflow-y: auto;
+  }
+
+  .basket.is-open {
+    transform: translateY(0);
+  }
+
+  .basket__close {
+    display: block;
+  }
+
+  .basket-toggle {
+    display: flex;
+  }
+}
