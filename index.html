@@ -38,10 +38,12 @@
        <div id="menu-list" class="menu-list"></div>
      </section>
 
-     <aside id="basket" class="basket">
--      <h2 class="basket__header">Warenkorb</h2>
-+      <h2 class="basket__header">Your Basket</h2>
-       <ul id="basket-list" class="basket__list"></ul>
+    <aside id="basket" class="basket">
+  <div class="basket__header-row">
+    <h2 class="basket__header">Your Basket</h2>
+    <button id="basket-close" class="basket__close" type="button" data-action="close-basket" aria-label="Warenkorb schließen">✕</button>
+  </div>
+  <ul id="basket-list" class="basket__list"></ul>
        <p id="basket-total" class="basket__total">0.00 €</p>
      </aside>
    </main>
