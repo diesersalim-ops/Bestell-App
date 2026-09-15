@@ -1,32 +1,62 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bestell App</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Bestell App</title>
++  <title>Bestell App – BurgerHouse</title>
++  <link rel="icon" href="assets/icons/small burger logo.png">
+   <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
 
-  <header class="site-header">
-    <h1>Bestell App</h1>
-  </header>
+   <header class="site-header">
+-    <h1>Bestell App</h1>
++    <div class="site-header__brand">
++      <img class="site-header__logo" src="assets/icons/small burger logo.png" alt="Bestell App Logo">
++      <span class="site-header__name">Bestell App</span>
++    </div>
++    <button class="site-header__menu-button" type="button" aria-label="Menü öffnen">☰</button>
+   </header>
 
-  <main class="layout">
-    <section id="menu" class="menu">
-      <h2>Speisekarte</h2>
-      <div id="menu-list" class="menu-list"></div>
-    </section>
++  <section class="hero">
++    <img class="hero__image" src="assets/img/hero-section.jpg" alt="Auswahl an Burgern, Pizza und Salaten">
++    <img class="hero__badge" src="assets/icons/logo burger.png" alt="">
++  </section>
++
++  <section class="restaurant-info">
++    <h1 class="restaurant-info__name">
++      <span class="restaurant-info__name-accent">Burger</span>House
++    </h1>
++    <p class="restaurant-info__rating">
++      <span aria-hidden="true">★</span> 4,1 <span class="restaurant-info__rating-count">(317)</span>
++    </p>
++    <p class="restaurant-info__tagline">The best of Burgers, Pizza, and Greens, all in one great place.</p>
++    <p class="restaurant-info__delivery">Lieferung: 4,99 € · ca. 30–45 Min.</p>
++  </section>
++
+   <main class="layout">
+     <section id="menu" class="menu">
+-      <h2>Speisekarte</h2>
++      <h2 class="menu__heading">Speisekarte</h2>
+       <div id="menu-list" class="menu-list"></div>
+     </section>
 
-    <aside id="basket" class="basket">
-      <h2 class="basket__header">Warenkorb</h2>
-      <ul id="basket-list" class="basket__list"></ul>
-      <p id="basket-total" class="basket__total">0.00 €</p>
-    </aside>
-  </main>
+     <aside id="basket" class="basket">
+-      <h2 class="basket__header">Warenkorb</h2>
++      <h2 class="basket__header">Your Basket</h2>
+       <ul id="basket-list" class="basket__list"></ul>
+       <p id="basket-total" class="basket__total">0.00 €</p>
+     </aside>
+   </main>
 
-  <script src="scripts/db.js"></script>
-  <script src="scripts/template.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+-  <script src="scripts/db.js"></script>
+-  <script src="scripts/template.js"></script>
+-  <script src="script.js"></script>
++  <footer class="site-footer">
++    <p class="site-footer__copyright">© 2025 BurgerHouse</p>
++    <a class="site-footer__link" href="#">Imprint</a>
++    <a class="site-footer__link" href="#">Cookie Preferences</a>
++  </footer>
++
++  <script src="scripts/db.js" defer></script>
++  <script src="scripts/template.js" defer></script>
++  <script src="script.js" defer></script>
+ </body>
+ </html>
