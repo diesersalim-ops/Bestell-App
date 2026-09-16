@@ -25,10 +25,31 @@ function renderBasket() {
     ? ids.map(id => Template.basketItem({ ...findMenuItem(id), quantity: basket.get(id) })).join('')
     : Template.basketEmpty();
   summary.hidden = ids.length === 0;
+  updateBasketToggleCount();
   if (ids.length === 0) return;
   const subtotal = calculateSubtotal();
   document.getElementById('basket-subtotal').textContent = Template.formatPrice(subtotal);
   document.getElementById('basket-total').textContent = Template.formatPrice(subtotal + DELIVERY_FEE);
+}
+
+
+function updateBasketToggleCount() {
+  const badge = document.getElementById('basket-toggle-count');
+  const total = [...basket.values()].reduce((sum, qty) => sum + qty, 0);
+  badge.textContent = total;
+  badge.hidden = total === 0;
+}
+
+
+function toggleBasket() {
+  const isOpen = document.getElementById('basket').classList.toggle('is-open');
+  document.getElementById('basket-overlay').hidden = !isOpen;
+}
+
+
+function closeBasket() {
+  document.getElementById('basket').classList.remove('is-open');
+  document.getElementById('basket-overlay').hidden = true;
 }
 
 
@@ -124,4 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('basket-list').addEventListener('click', handleBasketClick);
   document.getElementById('basket-buy').addEventListener('click', placeOrder);
   document.getElementById('confirmation').addEventListener('click', handleConfirmationClick);
+  document.getElementById('basket-toggle').addEventListener('click', toggleBasket);
+  document.getElementById('basket-close').addEventListener('click', closeBasket);
+  document.getElementById('basket-overlay').addEventListener('click', closeBasket);
 });
