@@ -1,0 +1,19 @@
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-l);
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: var(--spacing-m);
+  margin-top: var(--spacing-l);
+  font-size: 0.85rem;
+}
+
+.site-footer__link {
+  color: #ffffff;
+}
+
+.site-footer__link:hover {
+  text-decoration: underline;
+}
