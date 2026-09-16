@@ -1,3 +1,12 @@
+.basket {
+  position: sticky;
+  top: var(--spacing-l);
+  background-color: var(--color-dark);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: var(--spacing-m);
+}
+
 .basket__header {
   font-size: 1.1rem;
 }
@@ -17,6 +26,122 @@
   font-size: 1.1rem;
   cursor: pointer;
   line-height: 1;
+}
+
+.basket__list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.basket__item {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border-radius: 8px;
+  padding: var(--spacing-s) var(--spacing-m);
+  margin-bottom: var(--spacing-s);
+}
+
+.basket__item-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-s);
+  margin-bottom: var(--spacing-s);
+}
+
+.basket__item-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.basket__item-delete {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.basket__item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.basket__item-price {
+  font-weight: 700;
+}
+
+.basket__empty {
+  text-align: center;
+  padding: var(--spacing-l) 0;
+  color: #c9c9c9;
+}
+
+.basket__empty-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: var(--spacing-s);
+}
+
+.basket__summary {
+  border-top: 1px solid #3a3a3a;
+  margin-top: var(--spacing-m);
+  padding-top: var(--spacing-m);
+}
+
+.basket__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  color: #c9c9c9;
+}
+
+.basket__row--total {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.basket__buy {
+  width: 100%;
+  text-align: center;
+  margin-top: var(--spacing-s);
+}
+
+.basket-toggle {
+  display: none;
+  position: fixed;
+  right: var(--spacing-m);
+  bottom: var(--spacing-m);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  z-index: 21;
+}
+
+.basket-toggle__count {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-dark);
+  color: #ffffff;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
 }
 
 .basket-overlay {
