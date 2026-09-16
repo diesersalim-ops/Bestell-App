@@ -1,15 +1,20 @@
 :root {
-  --color-primary: #ff6600;
-  --color-primary-dark: #cc5200;
-  --color-text: #222;
+  --color-primary: #f07a23;
+  --color-primary-dark: #c25e12;
+  --color-text: #1f1f1f;
+  --color-text-muted: #6b6b6b;
   --color-background: #ffffff;
-  --color-border: #dddddd;
+  --color-surface: #fbe3c7;
+  --color-dark: #232323;
+  --color-border: #e5e0da;
 
-  --font-family-base: 'AppFont', Arial, sans-serif;
+  --font-family-base: -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 
   --spacing-s: 8px;
   --spacing-m: 16px;
   --spacing-l: 32px;
+
+  --content-max-width: 1440px;
 }
 
 * {
@@ -38,4 +43,10 @@ a {
 img {
   max-width: 100%;
   display: block;
+}
+
+.container {
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: var(--spacing-l);
 }
